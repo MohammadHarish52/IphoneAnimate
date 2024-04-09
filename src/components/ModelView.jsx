@@ -1,4 +1,10 @@
-import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
+import {
+  Html,
+  Loader,
+  OrbitControls,
+  PerspectiveCamera,
+  View,
+} from "@react-three/drei";
 import Lights from "./Lights";
 import IPhone from "./IPhone.jsx";
 import * as THREE from "three";
@@ -17,7 +23,9 @@ const ModelView = ({
     <View
       index={index}
       id={gsapType}
-      className={` w-full h-full ${index === 2 ? "right-[100%]" : ""}`}
+      className={` w-full h-full absolute ${
+        index === 2 ? "right-[-100%]" : ""
+      }`}
     >
       {" "}
       <ambientLight intensity={0.3} />
