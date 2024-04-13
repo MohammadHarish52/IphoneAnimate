@@ -4,6 +4,10 @@ import Highlights from "./components/Highlights";
 import Navbar from "./components/Navbar";
 import Model from "./components/Model";
 
+import * as Sentry from "@sentry/react";
+import Features from "./components/Features";
+import Chip from "./components/Chip";
+
 function App() {
   return (
     <main>
@@ -11,8 +15,10 @@ function App() {
       <Hero />
       <Highlights />
       <Model />
+      <Features />
+      <Chip />
     </main>
   );
 }
 
-export default App;
+export default Sentry.withProfiler(App);
